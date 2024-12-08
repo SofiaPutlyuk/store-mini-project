@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css"/>
+</head>
+<body>
+  
+    <div class="container">
+        <header>
+            <h1>Enhanced Fake Store</h1>
+            <div class="controls">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                </select>
+
+                <select id="sort-filter">
+                    <option value="default">Sort by</option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                </select>
+
+                <input type="text" id="search-input" placeholder="Search products...">
+            </div>
+        </header>
+
+        <main>
+            <button id="load-products" class="btn">Load Products</button>
+            <div id="product-list" class="product-list"></div>
+        </main>
+
+        <!-- Кнопка для відкриття кошика -->
+        <button id="open-cart-btn" class="btn">Open Cart</button>
+
+        <!-- Модальне вікно для деталей продукту -->
+        <div id="product-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img id="modal-image" src="" alt="Product Image">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <p><strong>Price:</strong> $<span id="modal-price"></span></p>
+                <p><strong>Rating:</strong> <span id="modal-rating"></span></p>
+            </div>
+        </div>
+
+        <!-- Модальне вікно для кошика -->
+        <div id="cart-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn cart-close-btn">&times;</span>
+                <h3>Shopping Cart</h3>
+                <ul id="cart-modal-items">
+                    <!-- Додані елементи кошика -->
+                </ul>
+                <p id="cart-modal-total">Total: $0.00</p>
+            </div>
+        </div>
+    </div>
+<script src="./domElements.js" type="module"></script>
+<script src="./constants.js" type="module"></script>
+<script src="./api.js" type="module"></script>
+<script src="./products.js" type="module"></script>
+<script src="./cart.js" type="module"></script>
+<script src="./modals.js" type="module"></script>
+<script src="./search.js" type="module"></script>
+<script src="./filters.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+</body>
+</html>
